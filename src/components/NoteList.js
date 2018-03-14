@@ -2,22 +2,24 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Note from './note';
 
-const filtered =(notes, filter) => {
-  switch(filter){
+const filtered =(notes, currentFilter) => {
+  switch(currentFilter){
     case 'All':
       return notes;
     case 'Active Notes':
       return notes.filter(n => !n.complete)
     case 'Completed Notes':
       return notes.filter(n => n.complete)
+    default:
+      return notes;
   }
 }
 
 
-const NoteList =({notes}) => (
+const NoteList =({notes, currentFilter}) => (
    
   <ul>
-    {notes.map((n) =>{
+    {filtered (notes,currentFilter).map((n) =>{
       return(
         <Note  key= {n.id} {...n}/>
       )
@@ -27,6 +29,6 @@ const NoteList =({notes}) => (
   </ul>
   )
     const mapStateToProps =(state) => {
-      return {notes: state.notes, filter: state.filter}
+      return {notes: state.notes, currentFilter: state.currentFilter}
     }
 export default connect(mapStateToProps)(NoteList);

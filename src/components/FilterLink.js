@@ -31,7 +31,7 @@ const FilterLink = ({
     
 }
  const mapStateToProps =(state) => {
-    return {filter: state.filter}
+    return {filter: state.currentFilter}
  }
 
-export default FilterLink;
+export default connect(mapStateToProps)(FilterLink)

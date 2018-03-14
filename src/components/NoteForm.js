@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {incId} from '../actions/nextId';
 import {addNote} from '../actions/notes';
 
-class NoteForm extends React.component {
+class NoteForm extends React.Component {
 
   state = {name: ' '}
 
@@ -27,7 +27,9 @@ class NoteForm extends React.component {
       <div>
         <h3>Add a Sticky Note</h3>
         <form onSubmit={this.handleSubmit}>
-        <input value ={name} onChange={this.handleChange}/>
+      <input id = 'input' 
+        value ={name}
+         onChange={this.handleChange}/>
         </form>
       </div>
     )

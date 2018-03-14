@@ -2,13 +2,26 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {toggleNote} from '../actions/notes'
 
-const Note =({id, name, complete,dispatch}) => (
+const styles = {
+    complete: { 
+    textDecoration: 'line-through', 
+    color: 'green',
+  }
+}
+
+const Note = ({ 
+  id, 
+  name, 
+  complete, 
+  dispatch 
+}) => (
   <li
-    onClick={() => dispatch(toggleNote(id))}
-    style={complete ? {textDecoration: 'line-through', color: 'red'}:{}}
-    >
+    style={ complete ? styles.complete : {} }
+    onClick={ () => dispatch(toggleNote(id)) }
+  >
     {name}
-    </li>
+  </li>
 )
 
-export default connect()(Note);
+export default connect()(Note)
+
