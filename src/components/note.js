@@ -3,9 +3,8 @@ import {connect} from 'react-redux';
 import {toggleNote} from '../actions/notes'
 
 const styles = {
-    complete: { 
-    textDecoration: 'line-through', 
-    color: 'green',
+    complete: {  
+    backgroundColor: 'lightcoral',
   }
 }
 

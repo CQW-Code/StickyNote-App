@@ -1,7 +1,52 @@
 .App {
   text-align: center;
+  background-color: lightgray;
 }
 
+textarea 
+{
+height: 100px;
+width: 200px;
+box-sizing: border-box;
+border: 5px solid green;
+
+}
+
+.listnotes
+{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+  text-align: center;
+  list-style-type: none;
+  
+  
+}
+li
+{
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 5px;
+  text-decoration: none;
+  background-color: lightgreen;
+  
+  
+}
+
+
+.btnSubmit
+{
+  width: 200px;
+  height: 50px;
+  background: royalblue;
+  color: white;
+  text-decoration: bold;
+  font-size: 16px;
+  text-align: center;
+  border: 2px solid black;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

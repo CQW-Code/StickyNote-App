@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
 import notes from './notes';
 import nextId from './nextId';
-import filter from './filter';
+import currentFilter from './currentFilter';
 
 const rootReducer = combineReducers({
    notes,
    nextId,
-   filter
+   currentFilter
 })
 
 export default rootReducer;

@@ -18,7 +18,7 @@ const filtered =(notes, currentFilter) => {
 
 const NoteList =({notes, currentFilter}) => (
    
-  <ul>
+  <ul className='listnotes'>
     {filtered (notes,currentFilter).map((n) =>{
       return(
         <Note  key= {n.id} {...n}/>
@@ -29,6 +29,9 @@ const NoteList =({notes, currentFilter}) => (
   </ul>
   )
     const mapStateToProps =(state) => {
-      return {notes: state.notes, currentFilter: state.currentFilter}
+      return {
+        notes: state.notes, 
+        currentFilter: state.currentFilter
+      }
     }
 export default connect(mapStateToProps)(NoteList);

@@ -27,9 +27,11 @@ class NoteForm extends React.Component {
       <div>
         <h3>Add a Sticky Note</h3>
         <form onSubmit={this.handleSubmit}>
-      <input id = 'input' 
+      <textarea 
         value ={name}
          onChange={this.handleChange}/>
+         <br/><br/>
+         <button type='submit' className ='btnSubmit'>Submit</button>
         </form>
       </div>
     )
